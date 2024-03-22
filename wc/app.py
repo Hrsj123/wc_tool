@@ -18,8 +18,6 @@ def main() -> None:
     file_path = argv[-1]
     is_file_valid = check_file(file_path)
     content = read_file(file_path) if is_file_valid else stdin.read()
-    if FLAGS['chars'] in flags:
-        byte_content = read_file(file_path, read_byte=True) if is_file_valid else stdin.read()
 
     # Calculate the result
     result = []
@@ -31,7 +29,7 @@ def main() -> None:
         elif flag == FLAGS['words']:
             output = num_of_words(content)
         elif flag == FLAGS['chars']:
-            output = num_of_characters(byte_content)
+            output = num_of_characters(content)
         result.append(output)
 
     print(f"   {'   '.join(result)}   {file_path if is_file_valid else '::stdin'}")
