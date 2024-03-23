@@ -43,7 +43,7 @@
 ```
 
 # Setup
-1. Create a virtual environment:<br/ >
+1. Create a virtual environment:<br />
   `python -m venv venv`
 
 2. Add the `ccwc` cmd to the virtual envoronment: <br />
