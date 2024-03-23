@@ -1,15 +1,20 @@
-from typing import List
+FILEPATH = 'filepath'
+
+BYTES = 'bytes'
+LINES = 'lines'
+WORDS = 'words'
+CHARS = 'chars'
 
 FLAGS: dict[str: str] = {
-    'bytes': '-c',
-    'lines': '-l',
-    'words': '-w',
-    'chars': '-m',
+    BYTES: '-c',
+    LINES: '-l',
+    WORDS: '-w',
+    CHARS: '-m',
 }
 
-# Only considering the flags which can be calculated by utf-8 encoding!
-DEFAULT_FLAG_KEYS: List[str] = [
-    'bytes',
-    'lines',
-    'words',
-]
+FLAGS_HELP: dict[str: str] = {
+    BYTES: 'outputs the number of bytes in a file',
+    LINES: 'outputs the number of lines in a file',
+    WORDS: 'outputs the number of words in a file',
+    CHARS: 'outputs the number of characters in a file',
+}
