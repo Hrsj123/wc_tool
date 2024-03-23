@@ -2,7 +2,7 @@ import argparse
 from .constants import FILEPATH, FLAGS, FLAGS_HELP
 
 def arg_parser() -> dict:
-    DESCRIPTION = 'A command-line utility inspired from Unix-based operating systems.'
+    DESCRIPTION = 'A command-line utility inspired from Unix-based operating systems to get information about text file.'
     EPILOG = f'{"-" *(len(DESCRIPTION) // 2 - 2)} END {"-" *(len(DESCRIPTION) // 2 - 2)}'
 
     parser = argparse.ArgumentParser(
